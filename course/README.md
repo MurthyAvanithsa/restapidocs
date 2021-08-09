@@ -18,21 +18,13 @@ Open endpoints require no Authentication.
 Closed endpoints require a valid Token to be included in the header of the
 request. A Token can be acquired from the Login view above.
 
-### Current User related
-
-Each endpoint manipulates or displays information related to the User whose
-Token is provided with the request:
-
-- [Show info](user/get.md) : `GET /api/user/`
-- [Update info](user/put.md) : `PUT /api/user/`
-
-### Account related
+### Syllabus related
 
 Endpoints for viewing and manipulating the Accounts that the Authenticated User
 has permissions to access.
 
-- [Show all syllabus items](syllabus/get.md) : `GET /api/accounts/`
-- [Create syllabus](syllabus/post.md) : `POST /api/accounts/`
-- [Show An syllabus](syllabus/pk/get.md) : `GET /api/accounts/:pk/`
-- [Update An syllabus](syllabus/pk/put.md) : `PUT /api/accounts/:pk/`
-- [Delete An syllabus](syllabus/pk/delete.md) : `DELETE /api/accounts/:pk/`
+- [Show all syllabus items](syllabus/get.md) : `GET /api/course/`
+- [Create syllabus](syllabus/post.md) : `POST /api/syllabus/`
+- [Show An syllabus](syllabus/pk/get.md) : `GET /api/syllabus/:pk/`
+- [Update An syllabus](syllabus/pk/put.md) : `PUT /api/syllabus/:pk/`
+- [Delete An syllabus](syllabus/pk/delete.md) : `DELETE /api/syllabus/:pk/`
