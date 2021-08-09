@@ -1,9 +1,8 @@
-# Create User's Account
+# Create Syllabus item
 
-Create an Account for the authenticated User if an Account for that User does
-not already exist. Each User can only have one Account.
+Create an syllabus item.
 
-**URL** : `/api/accounts/`
+**URL** : `/api/syllabus/`
 
 **Method** : `POST`
 
@@ -17,7 +16,7 @@ Provide name of Account to be created.
 
 ```json
 {
-    "name": "[unicode 64 chars max]"
+  "name": "[unicode 64 chars max]"
 }
 ```
 
@@ -25,7 +24,7 @@ Provide name of Account to be created.
 
 ```json
 {
-    "name": "Build something project dot com"
+  "name": "Build something project dot com"
 }
 ```
 
@@ -39,9 +38,9 @@ Provide name of Account to be created.
 
 ```json
 {
-    "id": 123,
-    "name": "Build something project dot com",
-    "url": "http://testserver/api/accounts/123/"
+  "id": 123,
+  "name": "Build something project dot com",
+  "url": "http://testserver/api/accounts/123/"
 }
 ```
 
@@ -65,8 +64,6 @@ Provide name of Account to be created.
 
 ```json
 {
-    "name": [
-        "This field is required."
-    ]
+  "name": ["This field is required."]
 }
 ```

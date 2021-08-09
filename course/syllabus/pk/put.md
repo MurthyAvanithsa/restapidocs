@@ -1,20 +1,18 @@
-# Update Account
+# Update Syllabus item
 
-Update the Account of the Authenticated User if and only if they are Owner.
+Update the syllabus item.
 
-**URL** : `/api/accounts/:pk/`
+**URL** : `/api/syllabus/:pk/`
 
 **Method** : `PUT`
 
 **Auth required** : YES
 
-**Permissions required** : User is Account Owner
-
 **Data constraints**
 
 ```json
 {
-    "name": "[unicode 64 chars max]",
+  "name": "[unicode 64 chars max]"
 }
 ```
 
@@ -22,7 +20,7 @@ Update the Account of the Authenticated User if and only if they are Owner.
 
 ```json
 {
-    "name": "Build something project dot com",
+  "name": "Build something project dot com"
 }
 ```
 
@@ -38,16 +36,16 @@ posted to `/api/accounts/123/`...
 
 ```json
 {
-    "id": 123,
-    "name": "New project name",
-    "enterprise": false,
-    "url": "http://testserver/api/accounts/123/"
+  "id": 345,
+  "name": "Week1",
+  "description": "Learn python basics.",
+  "url": "http://testserver/api/syallbus/345/"
 }
 ```
 
 ## Error Response
 
-**Condition** : Account does not exist at URL
+**Condition** : Syllabus does not exist at URL
 
 **Code** : `404 NOT FOUND`
 
@@ -67,28 +65,3 @@ posted to `/api/accounts/123/`...
 
 Endpoint will ignore irrelevant and read-only data such as parameters that
 don't exist, or `id` and `enterprise` fields which are not editable.
-
-E.g. if Account already exits:
-
-**Data example**
-
-```json
-{
-    "wibble": "flobble",
-    "id": 987,
-    "enterprise": true
-}
-```
-
-**Code** : `200 OK`
-
-**Content example**
-
-```json
-{
-    "id": 123,
-    "name": "New project name",
-    "enterprise": false,
-    "url": "http://testserver/api/accounts/123/"
-}
-```
