@@ -26,13 +26,13 @@ Show all Syllabus items the active User can access.
     "id": 345,
     "name": "Week1",
     "description": "Learn python basics.",
-    "url": "http://testserver/api/syallbus/345/"
+    "learningObjectives": "PYTHON"
   },
   {
     "id": 346,
     "name": "Week2",
     "description": "Database interaction with python.",
-    "url": "http://testserver/api/syallbus/345/"
+    "learningObjectives": "MYSQL,SQL"
   }
 ]
 ```

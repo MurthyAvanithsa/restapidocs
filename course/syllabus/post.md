@@ -16,7 +16,9 @@ Provide name of Account to be created.
 
 ```json
 {
-  "name": "[unicode 64 chars max]"
+  "name": "[unicode 64 chars max]",
+  "description": "[unicode 64 chars max]",
+  "learningObjectives": "[csv of string]"
 }
 ```
 
@@ -24,7 +26,10 @@ Provide name of Account to be created.
 
 ```json
 {
-  "name": "Build something project dot com"
+  "id": 345,
+  "name": "Week1",
+  "description": "Learn python basics.",
+  "url": "http://testserver/api/syallbus/345/"
 }
 ```
 
@@ -40,19 +45,9 @@ Provide name of Account to be created.
 {
   "id": 123,
   "name": "Build something project dot com",
-  "url": "http://testserver/api/accounts/123/"
+  "learningObjectives": "MYSQL,SQL"
 }
 ```
-
-## Error Responses
-
-**Condition** : If Account already exists for User.
-
-**Code** : `303 SEE OTHER`
-
-**Headers** : `Location: http://testserver/api/accounts/123/`
-
-**Content** : `{}`
 
 ### Or
 
